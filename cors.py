@@ -32,7 +32,6 @@ async def cors(request: Request, origins, method="GET") -> Response:
         additional_params=json.loads(request.get('params', '{}'))
     )
     headers['Access-Control-Allow-Origin'] = "*"
-    headers['Access-Control-Allow-Headers'] = "Origin, X-Requested-With, Content-Type, Accept"
     # if "text/html" not in headers.get('Content-Type'):
     #     headers['Content-Disposition'] = 'attachment; filename="master.m3u8"'
     del_keys = [
