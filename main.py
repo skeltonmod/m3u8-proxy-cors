@@ -5,7 +5,7 @@ from fastapi.responses import RedirectResponse
 from cors import add_cors
 
 try:
-    enable_docs = bool(os.getenv("documentation", False))
+    enable_docs = bool(os.getenv("documentation", True))
     docs_url = os.getenv('docs_url', '/docs') if enable_docs and os.getenv('docs_url', '/docs') else None
     redoc_url = os.getenv('redoc_url', '/redoc') if enable_docs and os.getenv('redoc_url', '/redoc') else None
     # set environment variable 'documentation' to 'True' if you want to enable the /docs path
